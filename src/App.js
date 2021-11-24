@@ -14,6 +14,7 @@ function App() {
 
   useEffect(() => {
     // eslint-disable-next-line no-template-curly-in-string
+    // eslint-disable-next-line no-console
     fetch(`https://pixabay.com/api/?key=${process.env.REACT_APP_PIXABAY_API_KEY}&q=${term}&image_type=photo&pretty=true`).then((res) => res.json()).then((data) => { setImages(data.hits); setIsLoading(false); }).catch((err) => console.log(err));
   }, [term]);
   return (

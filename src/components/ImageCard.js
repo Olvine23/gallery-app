@@ -16,7 +16,7 @@ const ImageCard = ({ image }) => {
             {/* // eslint-disable-next-line jsx-a11y/img-redundant-alt */}
             <img alt="No photo" className="object-contain h-10 w-10 rounded-full"src={image.userImageURL} />
           </div>
-          <ul className="text-xsm">
+          <ul className="text-xs">
             <li>
               <strong>Views: {image.views} </strong>
             </li>

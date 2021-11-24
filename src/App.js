@@ -6,7 +6,6 @@ import { Title } from './components/Title';
 // import Header from './Header';
 // import Footer from './Footer';
 import './assets/main.css';
-import img from './assets/img.jpg';
 
 function App() {
   const [images, setImages] = useState([]);

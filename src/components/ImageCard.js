@@ -13,6 +13,8 @@ const ImageCard = ({ image }) => {
         <div className="md:px-6 md:py-4 px-0 py-0">
           <div className="font-bold text-purple-500 text-sm mb-2">
             Photo by  {image.user}
+            {/* // eslint-disable-next-line jsx-a11y/img-redundant-alt */}
+            <img alt="No photo" className="object-contain h-10 w-10 rounded-full"src={image.userImageURL} />
           </div>
           <ul className="text-sm">
             <li>

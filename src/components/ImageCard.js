@@ -11,10 +11,10 @@ const ImageCard = ({ image }) => {
         <img src={image.webformatURL} />
         {/* caption section */}
         <div className="md:px-6 md:py-4 px-0 py-0">
-          <div className="font-bold text-purple-500 text-xl mb-2">
+          <div className="font-bold text-purple-500 text-sm mb-2">
             Photo by  {image.user}
           </div>
-          <ul>
+          <ul className="text-sm">
             <li>
               <strong>Views: {image.views} </strong>
             </li>
@@ -28,7 +28,7 @@ const ImageCard = ({ image }) => {
         </div>
         <div className="px-6 py-4">
           {tags.map((tag, index) => (
-            <span key={index} className="inline-block bg-gray-200 rounded-full px-3 text-sm font-semibold text-gray-700 ">
+            <span key={index} className="inline-block bg-gray-200 rounded-full px-3 text-xs font-semibold text-gray-700 ">
               #{tag}
             </span>
           ))}

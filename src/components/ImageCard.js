@@ -10,7 +10,7 @@ const ImageCard = ({ image }) => {
 
         <img src={image.webformatURL} />
         {/* caption section */}
-        <div className="px-6 py-4">
+        <div className="md:px-6 md:py-4 px-0 py-0">
           <div className="font-bold text-purple-500 text-xl mb-2">
             Photo by  {image.user}
           </div>

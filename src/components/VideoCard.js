@@ -10,11 +10,11 @@ const VideoCard = ({ video }) => {
       {console.log(video.videos.large.url)}
 
       {/* // eslint-disable-next-line jsx-a11y/iframe-has-title */}
-      <iframe
+      {/* <iframe
         width="220"
         height="115"
         src={c}
-      />
+      /> */}
     </div>
   );
 };

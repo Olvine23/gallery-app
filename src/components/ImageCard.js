@@ -5,7 +5,7 @@ const ImageCard = ({ image }) => {
   const tags = image.tags.split(',');
   return (
     <div>
-      <h1 className="uppercase text-lg text-center">{image.user} </h1>
+      <h1 className="uppercase text-sm text-center">{image.user} </h1>
       <div className="max-w-sm rounded overflow-hidden shadow-lg">
 
         <img src={image.webformatURL} />

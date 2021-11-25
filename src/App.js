@@ -23,14 +23,19 @@ function App() {
   // videos
   useEffect(() => {
     // eslint-disable-next-line no-console
-    fetch(`https://pixabay.com/api/videos/?key=${process.env.REACT_APP_PIXABAY_API_KEY}&q=${term}&pretty=true`).then((res) => res.json()).then((data) => { setVideos(data.hits); setIsLoading(false); }).catch((err) => console.log(err));
+    fetch(`https://pixabay.com/api/videos/?key=${process.env.REACT_APP_PIXABAY_API_KEY}&q=${term}&pretty=true`).then((res) => res.json()).then((data) => { setVideos(data.hits); console.log(videos); setIsLoading(false); })
+    .catch((err) => console.log(err));
   }, [term]);
-
+  console.log(videos);
+  const {large,medium,small} = videos;
+  console.log(large);
+   
   return (
     <div className="container mx-auto ">
+
       <ImageSearch searchText={(text) => setTerm(text)} />
       <Title />
-      {!isLoading && images.length === 0 && <h1 className="text-xl text-center mx-auto md:mt-48 sm:mt-10">Hakuna Picha Izaa Manze... Could not match results of {term} </h1>}
+      {!isLoading && images.length === 0 && <h1 className="text-xl text-center mx-auto md:mt-48 sm:mt-10">Could not match results of {term} </h1>}
       { isLoading ? <h1 className="text-6xl text-center mx-auto mt-48">Loading...</h1>
         : (
           <div className="grid grid-cols-2 md:grid md:grid-cols-3 gap-3 md:mx-10 mx-2 whitespae-normal md:gap-3">
@@ -39,14 +44,15 @@ function App() {
             ))}
 
           </div>
-        ) }
-      {!isLoading && videos.length === 0 && <h1 className="text-xl text-center mx-auto md:mt-48 sm:mt-10">Hakuna Picha Izaa Manze... Could not match results of {term} </h1>}
+        ) } 
       { isLoading ? <h1 className="text-6xl text-center mx-auto mt-48">Loading...</h1>
         : (
           <div className="grid grid-cols-2 md:grid md:grid-cols-3 gap-3 md:mx-10 mx-2 whitespae-normal md:gap-3">
+            <h2>Hello</h2>
             {videos.map((video) => (
               <VideoCard key={video.id} video={video} />
             ))}
+
           </div>
         ) }
 

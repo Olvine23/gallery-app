@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/img-redundant-alt */
 import React from 'react';
 import img from '../assets/img.jpg';
 
@@ -5,7 +6,7 @@ const ImageCard = ({ image }) => {
   const tags = image.tags.split(',');
   return (
     <div>
-      <h1 className="uppercase text-sm text-center">{image.user} </h1>
+      <h2 className="uppercase text-sm text-center">{image.user} </h2>
       <div className="max-w-sm rounded overflow-hidden shadow-lg">
 
         <img src={image.webformatURL} />
@@ -14,7 +15,8 @@ const ImageCard = ({ image }) => {
           <div className="font-bold text-purple-500 text-sm mb-2">
             Photo by  {image.user}
             {/* // eslint-disable-next-line jsx-a11y/img-redundant-alt */}
-            <img alt="No photo" className="object-contain h-10 w-10 rounded-full"src={image.userImageURL} />
+            {/* // eslint-disable-next-line jsx-a11y/img-redundant-alt */}
+            <img alt="No photo" className="object-contain h-10 w-10 rounded-full" src={image.userImageURL} />
           </div>
           <ul className="text-xs">
             <li>

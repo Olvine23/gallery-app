@@ -47,11 +47,11 @@ function App() {
         ) } 
       { isLoading ? <h1 className="text-6xl text-center mx-auto mt-48">Loading...</h1>
         : (
-          <div className="grid grid-cols-2 md:grid md:grid-cols-3 gap-3 md:mx-10 mx-2 whitespae-normal md:gap-3">
-            <h2>Hello</h2>
-            {videos.map((video) => (
+          <div>
+            <h2 className=" text-center text-purple-500 font-bold text-xl mt-10">Hello, videos are coming soon</h2>
+            {/* {videos.map((video) => (
               <VideoCard key={video.id} video={video} />
-            ))}
+            ))} */}
 
           </div>
         ) }

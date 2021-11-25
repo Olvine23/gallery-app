@@ -2,7 +2,7 @@ import React from 'react'
 
 const VideoCard = ( {video}) => {
     return (
-        <div>
+        <div className="max-w-sm rounded overflow-hidden shadow-lg">
              
              
             {video.id}

@@ -7,7 +7,7 @@ const ImageCard = ({ image }) => {
   const tags = image.tags.split(',');
   return (
     <div>
-      <h2 className="uppercase text-sm ml-5 ">{image.user} </h2>
+      <h2 className="uppercase text-sm md:ml-10 ml-5 ">{image.user} </h2>
       <div className="max-w-sm rounded overflow-hidden shadow-lg">
 
         <img className="mb-4" src={image.webformatURL} />
@@ -31,9 +31,9 @@ const ImageCard = ({ image }) => {
             </li>
           </ul>
         </div>
-        <div className="p-0">
+        <div className="p-0 mb-5 leading-9">
           {tags.map((tag, index) => (
-            <span key={index} className="inline-block bg-gray-200 ml-5 rounded-full text-xs font-semibold text-gray-700 ">
+            <span key={index} className="inline-block bg-gray-200 md:ml-10 ml-5  rounded-full text-xs font-semibold text-gray-700 p-1 px-2 ">
               #{tag}
             </span>
           ))}

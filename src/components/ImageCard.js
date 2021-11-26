@@ -24,13 +24,13 @@ const ImageCard = ({ image }) => {
           </div>
           <ul className="text-xs">
             <li>
-              <strong className="text-green-500">Views: </strong> <strong className="px-3">{image.views} </strong> 
+              <strong className="text-green-500">Views: </strong> <strong>{image.views} </strong> 
             </li>
             <li>
-              <strong className="text-green-500">Likes: </strong>  <strong className="px-3"> {image.likes} </strong>
+              <strong className="text-green-500">Likes: </strong>  <strong> {image.likes} </strong>
             </li>
             <li>
-              <strong className="text-green-500">Downloads: </strong> <strong className="px-2"> {image.downloads} </strong>
+              <strong className="text-green-500">Downloads: </strong> <strong> {image.downloads} </strong>
             </li>
           </ul>
         </div>

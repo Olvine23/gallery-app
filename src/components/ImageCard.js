@@ -1,22 +1,26 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import React from 'react';
+import { BrowserRouter as Router,  Link } from 'react-router-dom';
 import img from '../assets/img.jpg';
-
+import ViewImage from './ViewImage';
 const ImageCard = ({ image }) => {
   const tags = image.tags.split(',');
   return (
     <div>
+      <Router>
+       
+      </Router>
       <h2 className="uppercase text-sm text-center">{image.user} </h2>
       <div className="max-w-sm rounded overflow-hidden shadow-lg">
 
         <img src={image.webformatURL} />
         {/* caption section */}
-        <div className="md:px-6 md:py-4 px-0 py-0">
+        <div className="md:px-6 md:py-4 px-6 py-4">
           <div className="font-bold text-purple-500 text-sm mb-2">
             Photo by  {image.user}
             {/* // eslint-disable-next-line jsx-a11y/img-redundant-alt */}
             {/* // eslint-disable-next-line jsx-a11y/img-redundant-alt */}
-            <img className="object-contain h-10 w-10 rounded-full" src={image.userImageURL} />
+            <img className="object-contain h-10 w-10 rounded-full mt-2" src={image.userImageURL} />
           </div>
           <ul className="text-xs">
             <li>

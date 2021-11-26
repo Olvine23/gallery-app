@@ -7,15 +7,12 @@ const ImageCard = ({ image }) => {
   const tags = image.tags.split(',');
   return (
     <div>
-      <Router>
-       
-      </Router>
-      <h2 className="uppercase text-sm text-center">{image.user} </h2>
+      <h2 className="uppercase text-sm ">{image.user} </h2>
       <div className="max-w-sm rounded overflow-hidden shadow-lg">
 
         <img src={image.webformatURL} />
         {/* caption section */}
-        <div className="md:px-6 md:py-4 px-6 py-4">
+        <div className="md:px-6 md:py-4 ">
           <div className="font-bold text-purple-500 text-sm mb-2">
             Photo by  {image.user}
             {/* // eslint-disable-next-line jsx-a11y/img-redundant-alt */}
@@ -34,9 +31,9 @@ const ImageCard = ({ image }) => {
             </li>
           </ul>
         </div>
-        <div className="px-6 py-4">
+        <div className="p-0">
           {tags.map((tag, index) => (
-            <span key={index} className="inline-block bg-gray-200 rounded-full px-3 text-xs font-semibold text-gray-700 ">
+            <span key={index} className="inline-block bg-gray-200 rounded-full text-xs font-semibold text-gray-700 ">
               #{tag}
             </span>
           ))}

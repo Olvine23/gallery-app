@@ -7,21 +7,21 @@ const ImageCard = ({ image }) => {
   const tags = image.tags.split(',');
   return (
     <div>
-      <h2 className="uppercase text-sm ">{image.user} </h2>
+      <h2 className="uppercase text-sm ml-5 ">{image.user} </h2>
       <div className="max-w-sm rounded overflow-hidden shadow-lg">
 
-        <img src={image.webformatURL} />
+        <img className="mb-4" src={image.webformatURL} />
         {/* caption section */}
         <div className="md:px-6 md:py-4 ">
-          <div className="font-bold text-purple-500 text-sm mb-2">
+          <div className="font-bold text-purple-500 ml-5 text-sm mb-2">
             Photo by  {image.user}
             {/* // eslint-disable-next-line jsx-a11y/img-redundant-alt */}
             {/* // eslint-disable-next-line jsx-a11y/img-redundant-alt */}
-            <img className="object-contain h-10 w-10 rounded-full mt-2" src={image.userImageURL} />
+            <img className="object-contain h-10 w-10 rounded-full mt-5" src={image.userImageURL} />
           </div>
-          <ul className="text-xs">
+          <ul className="text-xs ml-5 leading-loose">
             <li>
-              <strong className="text-green-500">Views: </strong> <strong>{image.views} </strong> 
+              <strong className="text-green-500 ">Views: </strong> <strong>{image.views} </strong> 
             </li>
             <li>
               <strong className="text-green-500">Likes: </strong>  <strong> {image.likes} </strong>
@@ -33,7 +33,7 @@ const ImageCard = ({ image }) => {
         </div>
         <div className="p-0">
           {tags.map((tag, index) => (
-            <span key={index} className="inline-block bg-gray-200 rounded-full text-xs font-semibold text-gray-700 ">
+            <span key={index} className="inline-block bg-gray-200 ml-5 rounded-full text-xs font-semibold text-gray-700 ">
               #{tag}
             </span>
           ))}

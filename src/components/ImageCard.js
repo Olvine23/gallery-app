@@ -16,17 +16,17 @@ const ImageCard = ({ image }) => {
             Photo by  {image.user}
             {/* // eslint-disable-next-line jsx-a11y/img-redundant-alt */}
             {/* // eslint-disable-next-line jsx-a11y/img-redundant-alt */}
-            <img alt="No photo" className="object-contain h-10 w-10 rounded-full" src={image.userImageURL} />
+            <img className="object-contain h-10 w-10 rounded-full" src={image.userImageURL} />
           </div>
           <ul className="text-xs">
             <li>
-              <strong className="text-green-500">Views: </strong> <strong>{image.views} </strong> 
+              <strong className="text-green-500">Views: </strong> <strong className="px-3">{image.views} </strong> 
             </li>
             <li>
-              <strong className="text-green-500">Likes: </strong>  <strong> {image.likes} </strong>
+              <strong className="text-green-500">Likes: </strong>  <strong className="px-3"> {image.likes} </strong>
             </li>
             <li>
-              <strong className="text-green-500">Downloads: </strong> <strong> {image.downloads} </strong>
+              <strong className="text-green-500">Downloads: </strong> <strong className="px-2"> {image.downloads} </strong>
             </li>
           </ul>
         </div>

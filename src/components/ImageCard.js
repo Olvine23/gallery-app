@@ -20,13 +20,13 @@ const ImageCard = ({ image }) => {
           </div>
           <ul className="text-xs">
             <li>
-              <strong>Views: {image.views} </strong>
+              <strong className="text-green-500">Views: </strong> <strong>{image.views} </strong> 
             </li>
             <li>
-              <strong>Likes:  {image.likes} </strong>
+              <strong className="text-green-500">Likes: </strong>  <strong> {image.likes} </strong>
             </li>
             <li>
-              <strong>Downloads:  {image.downloads} </strong>
+              <strong className="text-green-500">Downloads: </strong> <strong> {image.downloads} </strong>
             </li>
           </ul>
         </div>

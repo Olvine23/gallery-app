@@ -4,7 +4,8 @@ import ImageCard from './components/ImageCard';
 import VideoCard from './components/VideoCard';
 import ImageSearch from './components/ImageSearch';
 import { Title } from './components/Title';
-// import Header from './Header';
+import Header from './Header';
+import NavBar from './components/NavBar';
 // import Footer from './Footer';
 import './assets/main.css';
 
@@ -32,9 +33,11 @@ function App() {
    
   return (
     <div className="container mx-auto ">
+      <NavBar />
+     
 
       <ImageSearch searchText={(text) => setTerm(text)} />
-      <Title />
+       
       {!isLoading && images.length === 0 && <h1 className="text-xl text-center mx-auto md:mt-48 sm:mt-10">Could not match results of {term} </h1>}
       { isLoading ? <h1 className="text-6xl text-center mx-auto mt-48">Loading...</h1>
         : (
@@ -48,7 +51,7 @@ function App() {
       { isLoading ? <h1 className="text-6xl text-center mx-auto mt-48">Loading...</h1>
         : (
           <div>
-            <h2 className=" text-center text-purple-500 font-bold text-xl mt-10">Hello, videos are coming soon</h2>
+            <h2 className=" text-center text-purple-500 font-bold text-xl mb-10 mt-10">Hello, videos are coming soon</h2>
             {/* {videos.map((video) => (
               <VideoCard key={video.id} video={video} />
             ))} */}

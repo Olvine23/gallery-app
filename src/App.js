@@ -32,13 +32,10 @@ function App() {
   return (
      
     <div className="container mx-auto ">
-      <Link to="/image">About</Link>
-
-     
-      <Routes> 
+      <Routes>
         <Route exact path='/image' element={<ImageCard />} />
         <Route exact path="/header" element={<Header />} />
-      </ Routes>
+      </Routes>
       <NavBar />
 
       <ImageSearch searchText={(text) => setTerm(text)} />

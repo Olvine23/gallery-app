@@ -1,16 +1,16 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import React from 'react';
-import { BrowserRouter as Router,  Link } from 'react-router-dom';
-import img from '../assets/img.jpg';
-import ViewImage from './ViewImage';
+import { Link } from 'react-router-dom';
+
 const ImageCard = ({ image }) => {
   const tags = image.tags.split(',');
   return (
     <div>
+     
       <h2 className="uppercase text-sm md:ml-10 ml-5 ">{image.user} </h2>
       <div className="max-w-sm rounded overflow-hidden shadow-lg">
 
-        <img className="mb-4" src={image.webformatURL} />
+        <Link to = "/image"><img className="mb-4" src={image.webformatURL} /> </Link>
         {/* caption section */}
         <div className="md:px-6 md:py-4 ">
           <div className="font-bold text-purple-500 ml-5 text-sm mb-2">

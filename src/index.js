@@ -1,13 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
-
+import { BrowserRouter, BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './index.css';
+import Header from './Header';
+import reportWebVitals from './reportWebVitals';
 import App from './App';
 
 ReactDOM.render(
   <BrowserRouter>
-    <App />
-  </BrowserRouter>,
-  document.getElementById('root'),
+    <Routes>
+      <Route path="/" element={<App />} />
+      <Route path="header" element={<Header />} />
+    </Routes>
+  </BrowserRouter>, document.getElementById('root'),
 );
+
+reportWebVitals();

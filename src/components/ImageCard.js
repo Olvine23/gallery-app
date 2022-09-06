@@ -29,16 +29,16 @@ const ImageCard = ({ image }) => {
           </div>
           <ul className="text-xs ml-5 leading-loose">
             <li>
-              <strong className="text-green-500 ">Views: </strong>{" "}
-              <strong>{image.views} </strong>
+              <strong className="text-gray-900 ">Views: </strong>{" "}
+              <strong className="text-blue-500">{image.views} </strong>
             </li>
             <li>
-              <strong className="text-green-500">Likes: </strong>{" "}
-              <strong> {image.likes} </strong>
+              <strong className="text-gray-900">Likes: </strong>{" "}
+              <strong className="text-blue-500"> {image.likes} </strong>
             </li>
             <li>
-              <strong className="text-green-500">Downloads: </strong>{" "}
-              <strong> {image.downloads} </strong>
+              <strong className="text-gray-900">Downloads: </strong>{" "}
+              <strong className="text-blue-500"> {image.downloads} </strong>
             </li>
           </ul>
         </div>
@@ -46,7 +46,7 @@ const ImageCard = ({ image }) => {
           {tags.map((tag, index) => (
             <span
               key={index}
-              className="inline-block bg-gray-200 md:ml-10 ml-5  rounded-full text-xs font-semibold text-gray-700 p-1 px-2 "
+              className="inline-block bg-green-200 md:ml-10 ml-5  rounded-full text-xs font-semibold text-gray-700 p-1 px-2 "
             >
               #{tag}
             </span>

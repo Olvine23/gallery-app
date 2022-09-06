@@ -4,6 +4,7 @@ import './App.css';
 import { Routes, Route,Link } from 'react-router-dom';
 import ImageCard from './components/ImageCard';
 import ImageSearch from './components/ImageSearch';
+import VideoCard from './components/VideoCard';
 import Title from './components/Title';
 import Header from './Header';
 import NavBar from './components/NavBar';
@@ -50,16 +51,16 @@ function App() {
 
           </div>
         ) }
-      { isLoading ? <h1 className="text-6xl text-center mx-auto mt-48">Loading...</h1>
+      {/* { isLoading ? <h1 className="text-6xl text-center mx-auto mt-48">Loading...</h1>
         : (
           <div>
             <h2 className=" text-center text-purple-500 font-bold text-xl mb-10 mt-10">Hello, videos are coming soon</h2>
-            {/* {videos.map((video) => (
+            {videos.map((video) => (
               <VideoCard key={video.id} video={video} />
-            ))} */}
+            ))}
 
           </div>
-        ) }
+        ) } */}
 
     </div>
     

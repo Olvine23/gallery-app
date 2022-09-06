@@ -13,14 +13,16 @@ const ViewImage = (props) => {
         <div className="relative flex flex-col-reverse py-16 lg:py-0 lg:flex-col">
         <div className="w-full max-w-xl px-4 mx-auto md:px-0 lg:px-8 lg:py-20 lg:max-w-screen-xl">
           <div className="mb-0 lg:max-w-lg lg:pr-8 xl:pr-6">
-            <h2 className="mb-5 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none md:text-center">
+            <h2 className=" font-sans md:text-3xl text-lg font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none md:text-center">
               Photo captured by {state.user}
             </h2>
             <p className="mb-5 text-base text-gray-700 md:text-lg md:text-center">
+            <div className="sm:flex sm:items-center sm:justify-center">
             <img
-              className= "md:ml-40 object-contain h-40 w-40 rounded-full mt-5"
+              className= " object-contain h-20 w-20  md:h-40 md:w-40 rounded-full mt-0 md:mt-5"
               src={state.userImg}
             />
+            </div>
                
             </p>
             <div className="mb-10 bg-gray-900 text-center md:mb-16 lg:mb-20">
